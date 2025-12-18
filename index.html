@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RNN Morse Translator </title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <div class="text-center mb-6" data-aos="zoom-in">
+      <h1>RNN Morse Translator</h1>
+      <p class="subtitle">Ubah kata, titik dan garis jadi kata dalam sekejap!</p>
+    </div>
+
+    <div class="card" data-aos="fade-up">
+      <select
+        id="modeSelect"
+        class="w-full mb-3 bg-gray-800 text-white rounded-md p-2"
+      >
+        <option value="morse2text">Kode Morse ➡️ Teks</option>
+        <option value="text2morse">Teks ➡️ Kode Morse</option>
+      </select>
+
+      <textarea
+        id="inputText"
+        rows="3"
+        class="w-full mb-3"
+        placeholder="Masukkan teks atau kode morse di sini..."
+      ></textarea>
+
+      <button
+        id="translateBtn"
+        class="w-full btn-glow text-black font-semibold py-2 rounded-md"
+      >
+        🚀 Translate & Play Audio
+      </button>
+
+      <div id="result" class="mt-4 text-center text-xl font-semibold"></div>
+    </div>
+
+    <div id="flashLight" class="flash" data-aos="zoom-in"></div>
+
+    <script src="script.js"></script>
+    <div class="footer">
+  🔊 Diterjemahkan menggunakan <span>Recurrent Neural Network (RNN)</span><br>
+  🧠 Dibuat oleh <strong>Artha Rifqi Sandy</strong>
+</div>
+  </body>
+</html>
