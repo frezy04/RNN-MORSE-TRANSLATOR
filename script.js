@@ -81,7 +81,7 @@ document.getElementById("translateBtn").addEventListener("click", async () => {
   if (mode === "morse2text") {
     // Gunakan RNN di backend untuk Morse → Text
     try {
-      const response = await fetch("http://127.0.0.1:5000/translate", {
+      const response = await fetch("https://rnn-morse-translator.onrender.com/translate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ morse: text }),
@@ -99,3 +99,4 @@ document.getElementById("translateBtn").addEventListener("click", async () => {
     flashLight(morseResult);
   }
 });
+
