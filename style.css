@@ -47,7 +47,8 @@ h1 {
   font-style: italic;
   text-align: center;
   letter-spacing: 0.3px;
-  opacity: 1; /* KUNCI */
+  opacity: 1;
+  margin-bottom: 15px;
 }
 
 /* ====== SELECT ====== */
@@ -160,5 +161,6 @@ button:active {
   color: #111827;
   font-weight: 600;
 }
+
 
 
