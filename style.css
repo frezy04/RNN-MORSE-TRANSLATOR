@@ -13,7 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-height: 100vh;
+  min-height: 100svh;
   padding: 30px 15px;
 }
 
@@ -46,13 +46,7 @@ h1 {
   font-style: italic;
   text-align: center;
   letter-spacing: 0.3px;
-  opacity: 0;
-  animation: fadeIn 1.2s ease-in forwards;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(-5px); }
-  to { opacity: 1; transform: translateY(0); }
+  opacity: 1; /* KUNCI */
 }
 
 /* ====== SELECT ====== */
@@ -61,14 +55,14 @@ select {
   padding: 12px;
   border-radius: 8px;
   border: 1px solid #ccc;
+  background-color: black;
   font-size: 1rem;
-  background-color: #1e293b;
   color: #fff;
   transition: border 0.2s ease, background-color 0.2s ease;
 }
 
 select:focus {
-  border-color: #2563eb;
+  border-color: #0051ff;
   outline: none;
   background-color: #0f172a;
 }
@@ -94,7 +88,7 @@ textarea:focus {
 
 /* ====== BUTTON ====== */
 button {
-  background-color: #3b82f6;
+  background-color: #4c00ff;
   color: white;
   font-weight: 600;
   padding: 12px 22px;
@@ -105,7 +99,7 @@ button {
 }
 
 button:hover {
-  background-color: #2563eb;
+  background-color: #1e00ff;
   transform: translateY(-2px);
 }
 
