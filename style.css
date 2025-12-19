@@ -28,7 +28,7 @@ body {
   text-align: center;
   display: flex;
   flex-direction: column;
-  gap: 16px; /* jarak antar elemen tetap */
+  gap: 16px;
 }
 
 /* ====== TITLE ====== */
@@ -160,4 +160,5 @@ button:active {
   color: #111827;
   font-weight: 600;
 }
+
 
