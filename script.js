@@ -80,20 +80,20 @@ document.getElementById("translateBtn").addEventListener("click", async () => {
 
   resultDiv.innerHTML = "<span class='text-blue-300 animate-pulse'>⏳ Menerjemahkan...</span>";
 
-  if (mode === "morse2text") {
-    // Gunakan RNN di backend untuk Morse → Text
-    try {
-      const response = await fetch("https://rnn-morse-translator.onrender.com/translate", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ morse: text }),
-      });
-      const data = await response.json();
-      resultDiv.innerHTML = `<span class='text-green-400 neon'>${data.translation}</span>`;
-      flashLight(text);
-    } catch (error) {
-      resultDiv.innerHTML = "<span class='text-red-400'>❌ Gagal menghubungi server!</span>";
-    }
+if (mode === "morse2text") {
+  try {
+    const response = await fetch("https://rnn-morse-translator.onrender.com/translate", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ morse: text }),
+    });
+    const data = await response.json();
+    resultDiv.innerHTML = `<span class='text-green-400 neon'>${data.translation}</span>`;
+    flashLight(text);
+  } catch (error) {
+    resultDiv.innerHTML = "<span class='text-red-400'>❌ Gagal menghubungi server!</span>";
+  }
+
   } else {
     // Text → Morse langsung di frontend
     const morseResult = textToMorse(text);
@@ -101,4 +101,5 @@ document.getElementById("translateBtn").addEventListener("click", async () => {
     flashLight(morseResult);
   }
 });
+
 
