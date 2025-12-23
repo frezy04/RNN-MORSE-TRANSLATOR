@@ -93,7 +93,7 @@ document.getElementById("translateBtn").addEventListener("click", async () => {
 
   if (mode === "morse2text") {
     try {
-      const res = await fetch("http://127.0.0.1:5000/translate", {
+      const res = await fetch("https://rnn-morse-translator.onrender.com/translate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ morse: input })
@@ -110,3 +110,4 @@ document.getElementById("translateBtn").addEventListener("click", async () => {
     flashLight(morse);
   }
 });
+
